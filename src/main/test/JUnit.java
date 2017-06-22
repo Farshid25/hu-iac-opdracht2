@@ -14,28 +14,30 @@ BewonerService service = new BewonerService();
     @Test
     public void test1() {
         Stad stad = testClass.geefStad("Amsterdam");
-//        Assert.assertEquals(stad, null);
-        Assert.assertEquals("Amsterdam", stad.getName());
-
+         Assert.assertEquals("Amsterdam", stad.getName());
     }
-    public String iets(Stad stad) {
 
+    @Test
+    public void test2() {
+        Stad stad = testClass.geefStad("Utrecht");
+        Assert.assertEquals("Utrecht", stad.getName());
+    }
 
+    public String snelleTest(Stad stad) {
         //JsonObjectBuilder job = Json.createObjectBuilder();
         for (Stad m : service.getCities()) {
             if (service.getCities().contains(m)) {
-                System.out.println("poep");
+                System.out.println("goed");
             } else {
-                System.out.println("geen poep");
+                System.out.println("niet goed");
 
 //            List<Stad> list = service.getCities();
 //            job.add("naam stad: ", m.getName());
-//
-//            }
-            }
-        }return null;
+             }
+        }
+        return null;
     }
-    // OUD TEST
+
     @Test
     public void testGeefAantalWerklozenPerUtrecht() {
         BewonerService test1 = new BewonerService();

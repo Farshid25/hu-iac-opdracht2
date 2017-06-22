@@ -17,14 +17,12 @@ public class TestClass {
     }
 
     public String iets(Stad stad) {
-
-
         //JsonObjectBuilder job = Json.createObjectBuilder();
         for (Stad m : service.getCities()) {
             if (service.getCities().contains(m)) {
-                System.out.println("poep");
+                System.out.println("goed");
             } else {
-                System.out.println("geen poep");
+                System.out.println("niet goed");
 
 //            List<Stad> list = service.getCities();
 //            job.add("naam stad: ", m.getName());
